@@ -1,0 +1,23 @@
+{
+	"name": "news-site",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"dependencies": {},
+	"devDependencies": {},
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/iliasov-artem/NextProject.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/iliasov-artem/NextProject/issues"
+	},
+	"homepage": "https://github.com/iliasov-artem/NextProject#readme"
+}
