@@ -3,12 +3,26 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
-	"dependencies": {},
-	"devDependencies": {},
+	"dependencies": {
+		"@types/node": "^16.6.1",
+		"@types/react": "^17.0.18",
+		"body-parser": "^1.19.0",
+		"concurrently": "^6.2.1",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"next": "^11.1.0",
+		"node-fetch": "^2.6.1",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"styled-components": "^5.3.0",
+		"ts-node": "^10.2.0",
+		"typescript": "^4.3.5"
+	},
 	"scripts": {
-		"dev": "next",
+		"dev": "concurrently --kill-others \"npm run serve\" \"next\"",
 		"build": "next build",
-		"start": "next start"
+		"start": "next start",
+		"serve": "ts-node -O {\"\"\"module\"\"\":\"\"\"commonjs\"\"\"} ./server/index.ts"
 	},
 	"repository": {
 		"type": "git",
@@ -19,5 +33,9 @@
 	"bugs": {
 		"url": "https://github.com/iliasov-artem/NextProject/issues"
 	},
-	"homepage": "https://github.com/iliasov-artem/NextProject#readme"
+	"homepage": "https://github.com/iliasov-artem/NextProject#readme",
+	"devDependencies": {
+		"@types/styled-components": "^5.1.12",
+		"babel-plugin-styled-components": "^1.13.2"
+	}
 }
