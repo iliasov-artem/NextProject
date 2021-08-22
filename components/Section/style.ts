@@ -31,3 +31,9 @@ export const Title = styled.h2`
 		font-size: 2rem;
 	}
 `;
+
+export const MoreLink = styled.a`
+	margin: -20px 0 30px;
+	display: inline-block;
+	vertical-align: top;
+`;

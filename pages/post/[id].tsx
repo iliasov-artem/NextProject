@@ -12,7 +12,6 @@ type PostProps = {
 
 export const getStaticProps: GetStaticProps<PostProps> = async ({ params }) => {
 	if (typeof params.id !== 'string') throw new Error('Unexpected id');
-	console.log(`params`, params);
 	const post = await fetchPost(params.id);
 	return { props: { post } };
 };

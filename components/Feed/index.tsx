@@ -12,7 +12,14 @@ export const Feed = ({ posts, categories }: FeedProps) => {
 		<>
 			{categories.map((category) => {
 				const inSection = posts.filter((post) => post.category === category);
-				return <Section key={category} title={category} posts={inSection} />;
+				return (
+					<Section
+						key={category}
+						title={category}
+						posts={inSection}
+						isCompact
+					/>
+				);
 			})}
 		</>
 	);
