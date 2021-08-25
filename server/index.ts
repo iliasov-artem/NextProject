@@ -36,7 +36,7 @@ app.get('/categories/:id', (req, res) => {
 
 app.get('/comments/:post', (req, res) => {
 	const postId = Number(req.params.post);
-	const found = comments.find(({ post }) => post === postId);
+	const found = comments.filter(({ post }) => post === postId);
 	return res.json(found);
 });
 

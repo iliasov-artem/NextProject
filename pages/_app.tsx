@@ -6,6 +6,8 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Center } from '../components/Center';
 import { GlobalStyle, theme } from '../shared/theme';
+import { store } from '../store';
+import { AppContext } from 'next/app';
 
 const App = ({ Component, pageProps }) => {
 	return (
@@ -25,4 +27,12 @@ const App = ({ Component, pageProps }) => {
 	);
 };
 
-export default App;
+App.getInitialProps = async ({ Component, context }: AppContext) => ({
+	pageProps: {
+		...(Component.getInitialProps
+			? await Component.getInitialProps(context)
+			: {}),
+	},
+});
+
+export default store.withRedux(App);
